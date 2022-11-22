@@ -1,0 +1,15 @@
+#1. Introduce las carreras que deseas cursar
+#2. NOTA EVAU. Fase obligatoria
+#3. NOTA MEDIA DEL BACHILLERATO (NMB)
+#4. CALCULAIS LA NOTA DE ACCESO
+#5. Si la nota de acceso es <5->suspenso
+#6. INTRODUCES LAS NOTAS DE LAS ASIGNATURAS FASE VOLUNTARIA
+#7. NOTA DE ADMISION
+
+def carrera():
+    print("Que carrera quieres cursar?")
+    carrera1=input("opcion 1: ")
+    carrera2=input("opcion 2: ")
+    carrera3=input("opcion 3: ")
+
+def nota_evau():
