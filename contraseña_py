@@ -1,0 +1,57 @@
+
+# Crea contraseña segura
+#1. Una mezcla de letras mayúsculas y minúsculas
+#2.Al menos 8 caracteres, cuantos más caracteres, mejor.
+#3. Una mezcla de letras y números
+#4. La inclusión de al menos un carácter especial
+def letras():  #1
+    seguir=True
+    while seguir == True:
+        contrasena=input("Dime una palabra: ")
+        if (contrasena.islower() or contrasena.isupper()):
+            print('Incumple el criterio de tener mayúsculas y minúsculas ')
+        else:
+            print('Cumple el criterio de mayúsculas y minúsculas')
+            seguir=False
+    return(contrasena)
+    
+def caracteres(contrasena):#2
+    seguir=True
+    while seguir==True:
+        if(len(contrasena)<=8):
+            print('No cumple el criterio de los carcteres')
+            seguir=True
+            contrasena=letras()
+        else:
+            print('Cumple el criterio de los caracteres')
+            seguir=False
+    return(contrasena)
+
+def mezcla(contrasena): #3
+    seguir=True
+    while seguir==True:
+        if(contrasena.isalpha()==False and contrasena.isdigit()==False):
+            print("Cumple el criterio de mezclar letras y numeros")
+            seguir=False
+        else:
+            print("No cumple el criterio de mezclar letras y numeros")
+            seguir=True
+            contrasena=caracteres(letras())
+    return(contrasena)
+
+def simbolos(contrasena): #4
+    seguir=True
+    while seguir==True:
+        if(contrasena.isalnum()):
+            print("No cumple el criterio de incluir simbolos")
+            seguir=True
+            contrasena==mezcla(caracteres(letras()))
+        else:
+            print("Cumple el criterio de incluir simbolos")
+            seguir=False
+    return(contrasena)
+
+def password():
+    simbolos(mezcla(caracteres(letras())))
+    
+password()
