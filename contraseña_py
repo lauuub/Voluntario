@@ -1,13 +1,14 @@
 
+
 # Crea contraseña segura
 #1. Una mezcla de letras mayúsculas y minúsculas
-#2.Al menos 8 caracteres, cuantos más caracteres, mejor.
+#2. Al menos 8 caracteres, cuantos más caracteres, mejor.
 #3. Una mezcla de letras y números
 #4. La inclusión de al menos un carácter especial
 def letras():  #1
     seguir=True
     while seguir == True:
-        contrasena=input("Dime una palabra: ")
+        contrasena=input("Dime tu contraseña: ")
         if (contrasena.islower() or contrasena.isupper()):
             print('Incumple el criterio de tener mayúsculas y minúsculas ')
         else:
