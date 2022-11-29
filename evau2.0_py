@@ -6,10 +6,54 @@
 #6. INTRODUCES LAS NOTAS DE LAS ASIGNATURAS FASE VOLUNTARIA
 #7. NOTA DE ADMISION
 
-def carrera():
+def carrera(): #1
     print("Que carrera quieres cursar?")
     carrera1=input("opcion 1: ")
     carrera2=input("opcion 2: ")
     carrera3=input("opcion 3: ")
 
-def nota_evau():
+def lengua(): #2.1
+    seguir=True
+    while (seguir==True):
+        nota_lengua=int(input("Que nota has sacado en Lengua castellana y literatura?: "))
+        if((nota_lengua)<4 or (nota_lengua)>10):
+            seguir=True
+            print("No pondera con la nota de bachillerato")
+        else:
+            seguir=False
+        return(nota_lengua)
+    
+def mates(): #2.2
+    nota_mates=int(input("Que nota has sacado en mates?: "))
+    if((nota_mates)<4 or (nota_mates)>10):
+        seguir=False
+        print("No pondera con la nota de bachillerato")
+    else:
+        seguir=True
+    return(nota_mates)
+    
+def historia(): #2.3
+    nota_historia=int(input("Que nota has sacado en historia?: "))
+    if((nota_historia)<4 or (nota_historia)>10):
+        seguir=False
+        print("No pondera con la nota de bachillerato")
+    else:
+        seguir=True
+    return(nota_historia)
+
+def english(): #2.4
+    nota_english=int(input("Que nota has sacado en inglés?: "))
+    if((nota_english)<4 or (nota_english)>10):
+        seguir=False
+        print("No pondera con la nota de bachillerato")
+    else:
+        seguir=True
+    return(nota_english)
+        
+def evau(): #2
+    lengua()
+    mates()
+    historia()
+    english()
+    
+evau()
