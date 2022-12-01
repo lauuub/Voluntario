@@ -1,3 +1,4 @@
+#Parte 1 del ejercicio de practica para el examen
 #Escriba un programa que lea 5 palabras:Añada una función que controle si la palabra introducida tiene más de 10 letras. Si esto ocurre, muestra un mensaje al usuario y repite la lectura.Ordene la lista por el número de consonantes (no basta con que las muestre en orden, debe reordenarlas físicamente en la memoria).Añada una función que reciba la palabra y ​sustituya las vocales por una letra al azar​ de entre las siguientes: *, _, ñ, Ø.
 def letras_1():  #1
     p1=input("Dime la palabra 1: ")
