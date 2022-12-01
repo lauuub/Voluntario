@@ -1,6 +1,15 @@
-#ejerccio 4 de la practica de examen
-def letra():
-    palabra=input("Dime una palabra: ")
-    print((palabra)[::-1])
+#ejercicio 4 de la practica de examen
+#te devuelve la palabra inverida con las vocales en mayúscula
+def obtieneFraseVocalesMayusculas(frase):
+    frasefinal = ""
+    for char in frase:
+        if char in ('a', 'e', 'i', 'o', 'u'):
+            char = char.upper()
+            frasefinal += char
+        else: 
+            frasefinal += char
+    return frasefinal 
 
-letra()
+frase = input("Frase: ")
+
+print((obtieneFraseVocalesMayusculas(frase))[::-1])
