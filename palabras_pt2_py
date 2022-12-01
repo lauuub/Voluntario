@@ -1,0 +1,120 @@
+#parte 2 de la pregunta de práctica de examen de la primera evaluacion
+def ncons(pal):
+    cons=["b","c","d","f","g","h","j","k","l","m","n","ñ","p","q","r","s","t","v","w","x","y","z"]
+    n=0
+    if len(pal)==0:
+        n=-1
+    else:
+        for x in range(0,len(pal)):
+            if pal[x] in cons:
+                n=n+1
+    return(n)
+def main():
+    seguir=True
+    while seguir==True:
+        p1=input("Introduce la primera palabra: ")
+        if len(p1)<10:
+            print("La palabra debe tener un minimo de 10 caracteres")
+        else:
+            seguir=False
+    seguir=True
+    while seguir==True:
+        p2=input("Introduce la segunda palabra: ")
+        if len(p2)<10:
+            print("La palabra debe tener un minimo de 10 caracteres")
+        else:
+            seguir=False
+    seguir=True
+    while seguir==True:
+        p3=input("Introduce la tercera palabra: ")
+        if len(p3)<10:
+            print("La palabra debe tener un minimo de 10 caracteres")
+        else:
+            seguir=False
+    seguir=True
+    while seguir==True:
+        p4=input("Introduce la cuarta palabra: ")
+        if len(p4)<10:
+            print("La palabra debe tener un minimo de 10 caracteres")
+        else:
+            seguir=False
+    seguir=True
+    while seguir==True:
+        p5=input("Introduce la quinta palabra: ")
+        if len(p5)<10:
+            print("La palabra debe tener un minimo de 10 caracteres")
+        else:
+            seguir=False
+    res1=""
+    res2=""
+    res3=""
+    res4=""
+    res5=""
+    while res1=="" and res2=="" and res3=="" and res4=="" and res5=="":
+        if ncons(p1)>=ncons(p2) and ncons(p1)>=ncons(p3) and ncons(p1)>=ncons(p4) and ncons(p1)>=ncons(p5):
+            if res1=="":
+                res1=p1
+            elif res2=="":
+                res2=p1
+            elif res3=="":
+                res3=p1
+            elif res4=="":
+                res4=p1
+            else:
+                res5=p1
+            p1=""
+        if ncons(p2)>=ncons(p1) and ncons(p2)>=ncons(p3) and ncons(p2)>=ncons(p4) and ncons(p2)>=ncons(p5):
+            if res1=="":
+                res1=p2
+            elif res2=="":
+                res2=p2
+            elif res3=="":
+                res3=p2
+            elif res4=="":
+                res4=p2
+            else:
+                res5=p2
+            p2=""
+        if ncons(p3)>=ncons(p1) and ncons(p3)>=ncons(p2) and ncons(p3)>=ncons(p4) and ncons(p3)>=ncons(p5):
+            if res1=="":
+                res1=p3
+            elif res2=="":
+                res2=p3
+            elif res3=="":
+                res3=p3
+            elif res4=="":
+                res4=p3
+            else:
+                res5=p3
+            p3=""
+        if ncons(p4)>=ncons(p1) and ncons(p4)>=ncons(p3) and ncons(p4)>=ncons(p2) and ncons(p4)>=ncons(p5):
+            if res1=="":
+                res1=p4
+            elif res2=="":
+                res2=p4
+            elif res3=="":
+                res3=p4
+            elif res4=="":
+                res4=p4
+            else:
+                res5=p4
+            p4=""
+        if ncons(p5)>=ncons(p1) and ncons(p5)>=ncons(p3) and ncons(p5)>=ncons(p2) and ncons(p5)>=ncons(p4):
+            if res1=="":
+                res1=p5
+            elif res2=="":
+                res2=p5
+            elif res3=="":
+                res3=p5
+            elif res4=="":
+                res4=p5
+            else:
+                res5=p5
+            p5=""
+    print("La palabra con más consonantes es: " + res1)
+    print("La segunda palabra con más consonantes es:" + res2)
+    print("La tercera palabra con más consonantes es:" + res3)
+    print("La cuarta palabra con más consonantes es:" + res4)
+    print("La quinta palabra con más consonantes es:" + res5)
+
+main()
