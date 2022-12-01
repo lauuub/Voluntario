@@ -9,7 +9,7 @@ def evau():
     N2_bach=float(input("Escribe tu nota de 2º de bachillerato "))
     if(N1_bach>10 or N2_bach>10):
         print("Notas no validas")
-        acceso()
+        evau()
     else:
         NMB=(N1_bach+N2_bach)/2
         print(f"Tu nota media de bachillerato es {NMB}")
