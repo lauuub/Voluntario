@@ -1,59 +1,47 @@
-#1. Introduce las carreras que deseas cursar
+#1. NOTA MEDIA DEL BACHILLERATO (NMB)
 #2. NOTA EVAU. Fase obligatoria
-#3. NOTA MEDIA DEL BACHILLERATO (NMB)
-#4. CALCULAIS LA NOTA DE ACCESO
-#5. Si la nota de acceso es <5->suspenso
-#6. INTRODUCES LAS NOTAS DE LAS ASIGNATURAS FASE VOLUNTARIA
-#7. NOTA DE ADMISION
-
-def carrera(): #1
-    print("Que carrera quieres cursar?")
-    carrera1=input("opcion 1: ")
-    carrera2=input("opcion 2: ")
-    carrera3=input("opcion 3: ")
-
-def lengua(): #2.1
-    seguir=True
-    while (seguir==True):
-        nota_lengua=int(input("Que nota has sacado en Lengua castellana y literatura?: "))
-        if((nota_lengua)<4 or (nota_lengua)>10):
-            seguir=True
-            print("No pondera con la nota de bachillerato")
-        else:
-            seguir=False
-        return(nota_lengua)
-    
-def mates(): #2.2
-    nota_mates=int(input("Que nota has sacado en mates?: "))
-    if((nota_mates)<4 or (nota_mates)>10):
-        seguir=False
-        print("No pondera con la nota de bachillerato")
+#3. CALCULAIS LA NOTA DE ACCESO
+#4. INTRODUCES LAS NOTAS DE LAS ASIGNATURAS FASE VOLUNTARIA
+#5. NOTA DE ADMISION
+def evau():
+    #1
+    N1_bach=float(input("Escribe tu nota de 1º de bachillerato "))
+    N2_bach=float(input("Escribe tu nota de 2º de bachillerato "))
+    if(N1_bach>10 or N2_bach>10):
+        print("Notas no validas")
+        acceso()
     else:
-        seguir=True
-    return(nota_mates)
-    
-def historia(): #2.3
-    nota_historia=int(input("Que nota has sacado en historia?: "))
-    if((nota_historia)<4 or (nota_historia)>10):
-        seguir=False
-        print("No pondera con la nota de bachillerato")
-    else:
-        seguir=True
-    return(nota_historia)
-
-def english(): #2.4
-    nota_english=int(input("Que nota has sacado en inglés?: "))
-    if((nota_english)<4 or (nota_english)>10):
-        seguir=False
-        print("No pondera con la nota de bachillerato")
-    else:
-        seguir=True
-    return(nota_english)
-        
-def evau(): #2
-    lengua()
-    mates()
-    historia()
-    english()
-    
+        NMB=(N1_bach+N2_bach)/2
+        print(f"Tu nota media de bachillerato es {NMB}")
+        print("")
+    #2
+    n1=float(input("Introduce la nota de Lengua: "))
+    n2=float(input("Introduce la nota de Mates: "))
+    n3=float(input("Introduce la nota de Inglés: "))
+    n4=float(input("Introduce la nota de Historia: "))
+    NME=(n1+n2+n3+n4)/4
+    print(f"Tu nota media de la fase obligatoria es {NME}")
+    if(NME<4):
+        print("No has obtenido suficiente nota, intentalo al año que viene")
+    else: #3
+        nota_acceso=(NMB*0.6)+(NME*0.4)
+        nota_acceso=round(nota_acceso,1)
+        print(f"Tu nota de acceso es {nota_acceso}")
+        if(nota_acceso<5):
+            print("Estas suspenso, intentalo al año que viene.")
+        else: #4
+            print("")
+            print("Introduce las notas de las 2 optativas en las que tenga mayor nota" )
+            optativa_1=float(input("Optativa 1 : "))
+            optativa_2=float(input("Optativa 2 : "))
+            print("")
+            print("Ahora introduce por cuanto pondera cada una")
+            pond_1=float(input("Optativa 1: "))
+            pond_2=float(input("Optativa 2: "))
+            if(pond_1<0 or pond_1>0.2 or pond_2<0 or pond_2>0.2):
+                print("Ponderaciones no validas, vuelve a introducirlas")
+                ponderaciones()
+            else: #5
+                nota_evau=nota_acceso+(optativa_1*pond_1)+(optativa_2*pond_2)
+                print(f"Tu nota final de la evau es {nota_evau}")
 evau()
