@@ -1,0 +1,89 @@
+#Escriba un programa que lea 5 palabras:Añada una función que controle si la palabra introducida tiene más de 10 letras. Si esto ocurre, muestra un mensaje al usuario y repite la lectura.Ordene la lista por el número de consonantes (no basta con que las muestre en orden, debe reordenarlas físicamente en la memoria).Añada una función que reciba la palabra y ​sustituya las vocales por una letra al azar​ de entre las siguientes: *, _, ñ, Ø.
+def letras_1():  #1
+    p1=input("Dime la palabra 1: ")
+    return(p1)
+    
+def palabra_1(p1):#2
+    seguir=True
+    while seguir==True:
+        if(len(p1)>=10):
+            print('No cumple el criterio de los caracteres')
+            seguir=True
+            p1=letras_1()
+        else:
+            print('Cumple el criterio de los caracteres')
+            seguir=False
+    return(p1)
+    
+def letras_2():  #1
+    p2=input("Dime la palabra 2: ")
+    return(p2)
+    
+def palabra_2(p2):#2
+    seguir=True
+    while seguir==True:
+        if(len(p2)>=10):
+            print('No cumple el criterio de los caracteres')
+            seguir=True
+            p2=letras_2()
+        else:
+            print('Cumple el criterio de los caracteres')
+            seguir=False
+    return(p2)
+    
+def letras_3():  
+    p3=input("Dime la palabra 3: ")
+    return(p3)
+    
+def palabra_3(p3):
+    seguir=True
+    while seguir==True:
+        if(len(p3)>=10):
+            print('No cumple el criterio de los caracteres')
+            seguir=True
+            p3=letras_3()
+        else:
+            print('Cumple el criterio de los caracteres')
+            seguir=False
+    return(p3)
+    
+def letras_4():  #1
+    p4=input("Dime la palabra 4: ")
+    return(p4)
+    
+def palabra_4(p4):#2
+    seguir=True
+    while seguir==True:
+        if(len(p4)>=10):
+            print('No cumple el criterio de los caracteres')
+            seguir=True
+            p4=letras_4()
+        else:
+            print('Cumple el criterio de los caracteres')
+            seguir=False
+    return(p4)
+    
+def letras_5():  #1
+    p5=input("Dime la palabra 1: ")
+    return(p5)
+    
+def palabra_5(p5):#2
+    seguir=True
+    while seguir==True:
+        if(len(p5)>=10):
+            print('No cumple el criterio de los caracteres')
+            seguir=True
+            p5=letras_5()
+        else:
+            print('Cumple el criterio de los caracteres')
+            seguir=False
+    return(p5)
+    
+def funcion():
+    palabra_1(letras_1())
+    palabra_2(letras_2())
+    palabra_3(letras_3())
+    palabra_4(letras_4())
+    palabra_5(letras_5())
+    
+funcion()
