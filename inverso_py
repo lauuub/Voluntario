@@ -1,0 +1,6 @@
+#ejerccio 4 de la practica de examen
+def letra():
+    palabra=input("Dime una palabra: ")
+    print((palabra)[::-1])
+
+letra()
