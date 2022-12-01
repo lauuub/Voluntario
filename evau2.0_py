@@ -5,8 +5,8 @@
 #5. NOTA DE ADMISION
 def evau():
     #1
-    N1_bach=float(input("Escribe tu nota de 1º de bachillerato "))
-    N2_bach=float(input("Escribe tu nota de 2º de bachillerato "))
+    N1_bach=float(input("Escribe tu nota de 1º de bachillerato: "))
+    N2_bach=float(input("Escribe tu nota de 2º de bachillerato: "))
     if(N1_bach>10 or N2_bach>10):
         print("Notas no validas")
         evau()
